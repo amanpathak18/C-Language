@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+  int i, sum = 0, temp, digit, count = 0;
+  printf("Abundant numbers between 1 and 1000 are:\n");
+  for (i = 1; i <= 1000; i++) {
+    sum = 0;
+    temp = i;
+    // Calculate the sum of proper divisors
+    for (digit = 1; digit <= temp / 2; digit++) {
+      if (temp % digit == 0) {
+        sum += digit;
+      }
+    }
+    // Check if the number is abundant
+    if (sum > temp) {
+      printf("%d ", i);
+      count++;
+    }
+  }
+  printf("\nTotal Abundant numbers between 1 and 1000: %d\n", count);
+  return 0;
+}
