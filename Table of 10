@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main(){
+  int i;
+  printf("table of 10 is\n");
+  for(i=1;i<=10;i++){
+    printf("10*%d=%d\n",i,10*i);
+  }
+}
